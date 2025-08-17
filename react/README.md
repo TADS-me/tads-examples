@@ -14,6 +14,24 @@ A Telegram Mini App demonstrating how to integrate TADS for monetization through
 
 ```bash
 npm install
+npm install react-tads-widget
+```
+
+### Set up TadsWidgetProvider
+
+Wrap your app with the provider for optimal performance:
+
+```tsx
+// src/App.tsx
+import { TadsWidgetProvider } from 'react-tads-widget';
+
+function App() {
+  return (
+    <TadsWidgetProvider>
+      {/* Your app components */}
+    </TadsWidgetProvider>
+  );
+}
 ```
 
 ### Run Development Server
@@ -70,6 +88,24 @@ import { TadsWidget } from 'react-tads-widget';
 
 ```bash
 npm install react-tads-widget
+```
+
+### Step 1.5: Set up TadsWidgetProvider
+
+Wrap your app with `TadsWidgetProvider`:
+
+```tsx
+// In your main App.tsx or index.tsx
+import { TadsWidgetProvider } from 'react-tads-widget';
+
+function App() {
+  return (
+    <TadsWidgetProvider>
+      {/* Your app components */}
+      <YourApp />
+    </TadsWidgetProvider>
+  );
+}
 ```
 
 ### Step 2: Import and Use Widgets
