@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 :root {
-  --safe-area-top: 60px;
   --page-background: #16a34a; /* Default green background */
 }
 
@@ -14,10 +13,6 @@ body {
   max-width: 640px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   transition: background-color 0.3s ease;
-}
-
-.page-wrapper {
-  padding-top: var(--safe-area-top) !important;
 }
 
 * {

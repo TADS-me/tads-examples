@@ -48,3 +48,7 @@
   pointer-events: none;
   letter-spacing: 0.02em;
 }
+
+.fullscreen_rewarded {
+  padding-top: var(--tg-content-safe-area-inset-top);
+}
