@@ -13,10 +13,15 @@ body {
   max-width: 640px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   transition: background-color 0.3s ease;
+  padding-top: var(--tg-content-safe-area-inset-top);
 }
 
 * {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.page-wrapper {
+  padding-top: var(--tg-content-safe-area-inset-top, '32px');
 }
 
 /* Prevent iOS magnification and selection globally */
