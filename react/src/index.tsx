@@ -19,7 +19,7 @@ function detectFullscreenChange() {
   let contentSafeAreaTop = 0
 
   window.addEventListener('message', (e) => {
-    if (e.data.includes('content_safe_area_changed')) {
+    if (e.data?.eventType === 'web_app_request_content_safe_area') {
       const { eventData } = JSON.parse(e.data)
 
       if (eventData.top) {
@@ -31,7 +31,7 @@ function detectFullscreenChange() {
       }
     }
 
-    if (e.data.includes('safe_area_changed')) {
+    if (e.data?.eventType === 'web_app_request_safe_area') {
       const { eventData } = JSON.parse(e.data)
 
       if (eventData.top) {
