@@ -4,6 +4,8 @@
 
 :root {
   --page-background: #16a34a; /* Default green background */
+  --content-padding-top: calc(var(--tg-viewport-content-safe-area-inset-top) + var(--tg-viewport-safe-area-inset-top, 48px));
+  --content-padding-top-alternative: calc(var(--tg-safe-area-inset-top) + var(--tg-content-safe-area-inset-top, 48px));
 }
 
 body {
@@ -13,16 +15,16 @@ body {
   max-width: 640px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   transition: background-color 0.3s ease;
-  padding-top: var(--tg-content-safe-area-inset-top);
+  padding-top: var(--content-padding-top, --content-padding-top-alternative);
 }
 
 * {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.page-wrapper {
-  padding-top: var(--tg-content-safe-area-inset-top, '32px');
-}
+/* .page-wrapper {
+  padding-top: calc(var(--tg-content-safe-area-inset-top) + var(--tg-safe-area-inset-top, 0.5rem));
+} */
 
 /* Prevent iOS magnification and selection globally */
 html, body {

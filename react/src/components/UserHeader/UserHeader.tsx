@@ -38,24 +38,24 @@ export const UserHeader: FC = () => {
     <div className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-500 hover:to-green-600 transition-all duration-300 px-4 sm:px-5 py-3 sm:py-4 rounded-2xl sm:rounded-3xl shadow-xl mb-4 sm:mb-5 mx-4">
       <div className="flex items-center gap-3 sm:gap-4">
         <div className="w-12 h-12 sm:w-15 sm:h-15 rounded-full overflow-hidden border-2 sm:border-3 border-white/30 shadow-lg">
-          {user.photoUrl ? (
+          {user.photo_url ? (
             <img 
-              src={user.photoUrl} 
-              alt={user.firstName || user.username || 'User'} 
+              src={user.photo_url} 
+              alt={user.first_name || user.username || 'User'} 
               className="w-full h-full object-cover"
             />
           ) : (
             <div className="w-full h-full bg-white/20 flex items-center justify-center">
               <span className="text-lg sm:text-2xl font-bold text-white uppercase">
-                {user.firstName?.[0] || user.username?.[0] || '?'}
+                {user.first_name?.[0] || user.username?.[0] || '?'}
               </span>
             </div>
           )}
         </div>
         <div className="flex-1 text-white">
           <div className="text-base sm:text-lg font-semibold mb-2 text-shadow">
-            {user.firstName && user.lastName 
-              ? `${user.firstName} ${user.lastName}` 
+            {user.first_name && user.last_name 
+              ? `${user.first_name} ${user.last_name}` 
               : user.username || 'User'
             }
           </div>

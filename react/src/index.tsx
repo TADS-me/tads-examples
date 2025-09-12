@@ -56,14 +56,24 @@ function detectFullscreenChange() {
 try {
   detectFullscreenChange()
 
-  // Configure all application dependencies.
-  init(retrieveLaunchParams().startParam === 'debug' || import.meta.env.DEV);
+  const launchParams = retrieveLaunchParams();
+  const { tgWebAppPlatform: platform } = launchParams;
+  const debug = (launchParams.tgWebAppStartParam || '').includes('platformer_debug')
+    || import.meta.env.DEV;
 
-  root.render(
-    <StrictMode>
-      <Root/>
-    </StrictMode>,
-  );
+  // Configure all application dependencies.
+  await init({
+    debug,
+    eruda: debug && ['ios', 'android'].includes(platform),
+    mockForMacOS: platform === 'macos',
+  })
+    .then(() => {
+      root.render(
+        <StrictMode>
+          <Root/>
+        </StrictMode>,
+      );
+    });
 } catch (e) {
   root.render(<EnvUnsupported/>);
 }

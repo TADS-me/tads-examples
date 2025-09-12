@@ -13,13 +13,14 @@ export const LaunchParamsPage: FC = () => {
       <List>
         <DisplayData
           rows={[
-            { title: 'tgWebAppPlatform', value: lp.platform },
-            { title: 'tgWebAppShowSettings', value: lp.showSettings },
-            { title: 'tgWebAppVersion', value: lp.version },
-            { title: 'tgWebAppBotInline', value: lp.botInline },
-            { title: 'tgWebAppStartParam', value: lp.startParam },
+            { title: 'tgWebAppPlatform', value: lp.tgWebAppPlatform },
+            { title: 'tgWebAppShowSettings', value: lp.tgWebAppShowSettings },
+            { title: 'tgWebAppVersion', value: lp.tgWebAppVersion },
+            { title: 'tgWebAppBotInline', value: lp.tgWebAppBotInline },
+            { title: 'tgWebAppStartParam', value: lp.tgWebAppStartParam },
             { title: 'tgWebAppData', type: 'link', value: '/init-data' },
             { title: 'tgWebAppThemeParams', type: 'link', value: '/theme-params' },
+
           ]}
         />
       </List>
