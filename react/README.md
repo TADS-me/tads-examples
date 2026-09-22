@@ -4,7 +4,7 @@ A Telegram Mini App demonstrating how to integrate TADS for monetization through
 
 ## 🎯 What is TADS?
 
-[TADS](https://tads.me/register?utm_source=tads_demo&utm_medium=organic) is a advertising network that allows developers to monetize their Telegram Mini Apps through:
+[TADS](https://tads.me/register?source=example&intent=publisher) is a advertising network that allows developers to monetize their Telegram Mini Apps through:
 - **Static/TGB ads** - Clickable banner ads
 - **Fullscreen ads** - Video ads for rewards
 
@@ -223,4 +223,4 @@ npm run deploy
 
 ---
 
-**Ready to monetize your Telegram Mini App?** Start with [TADS](https://tads.me/register?utm_source=tads_demo&utm_medium=organic) integration today! 🚀💰
+**Ready to monetize your Telegram Mini App?** Start with [TADS](https://tads.me/register?source=example&intent=publisher) integration today! 🚀💰

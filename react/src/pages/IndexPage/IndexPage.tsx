@@ -65,7 +65,7 @@ export const IndexPage: FC = () => {
               >
                 Reset Stats
               </button>
-              <a href="https://tads.me/register?utm_source=tads_demo&utm_medium=organic" target="_blank" rel="noopener noreferrer" className='mx-auto w-full text-center'>
+              <a href="https://tads.me/register?source=example&intent=publisher" target="_blank" rel="noopener noreferrer" className='mx-auto w-full text-center'>
                 <Button className='uppercase rounded-lg bg-white text-green-700 w-full'>Sign Up TADS</Button>
               </a>
             </div>
